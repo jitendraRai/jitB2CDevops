@@ -22,7 +22,7 @@ jobs:
       - name: Update TrustFrameworkBase.xml
         shell: pwsh
         run: |
-          .\src\ad-b2c-templates\ad-b2c-custom-policies-generic\scripts\custom-policies-deployment-script.ps1 -ClientID 15e801c0-e1dd-4569-9621-950ecb36bfef -ClientSecret .FB2W8cvs1NHlPI~ian3-uEZm17I_a8eu. -TenantId 24c6d5a3-5eb7-453c-b8a5-72495d9f135e -PolicyId B2C_1A_TrustFrameworkBase -PathToFile .\src\ad-b2c-templates\ad-b2c-custom-policies-generic\custom-policies\TrustFrameworkBase.xml -ProxyIdentityExperienceFrameworkAppId $ -IdentityExperienceFrameworkAppId $ -StorageAccountPath $env:StorageAccountPath
+          .\src\ad-b2c-templates\ad-b2c-custom-policies-generic\scripts\custom-policies-deployment-script.ps1 -ClientID $ -ClientSecret $ -TenantId $ -PolicyId B2C_1A_TrustFrameworkBase -PathToFile .\src\ad-b2c-templates\ad-b2c-custom-policies-generic\custom-policies\TrustFrameworkBase.xml -ProxyIdentityExperienceFrameworkAppId $ -IdentityExperienceFrameworkAppId $ -StorageAccountPath $env:StorageAccountPath
           
       - name: Update TrustFrameworkExtensions.xml
         shell: pwsh
