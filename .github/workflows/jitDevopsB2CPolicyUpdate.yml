@@ -1,9 +1,5 @@
-name: AD-B2C custom policies release
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+name: AD-B2C Jit custom policies release
+on: [push]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
