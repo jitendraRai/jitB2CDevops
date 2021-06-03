@@ -1,3 +1,5 @@
+Write-Host " Function started"
+
 [Cmdletbinding()]
 Param(
     [Parameter(Mandatory = $true)][string]$ClientID,
@@ -10,7 +12,7 @@ Param(
     [Parameter(Mandatory = $false)][string]$StorageAccountPath,
     [Parameter(Mandatory = $false)][string]$FacebookClientId
 )
-
+Write-Host " Function started 2"
 Function ReplacePlaceholderWithValueInFile
 {
     param( 
@@ -21,6 +23,7 @@ Function ReplacePlaceholderWithValueInFile
     $customPolicyFileContent -replace $placeholder, $actualValue | Set-Content -Encoding UTF8 -Path $PathToFile
 }
 
+Write-Host " Function started 3"
 ReplacePlaceholderWithValueInFile -placeholder "##TENANT_ID##" -actualValue $TenantId
 ReplacePlaceholderWithValueInFile -placeholder "##ProxyIdentityExperienceFrameworkAppId##" -actualValue $ProxyIdentityExperienceFrameworkAppId
 ReplacePlaceholderWithValueInFile -placeholder "##IdentityExperienceFrameworkAppId##" -actualValue $IdentityExperienceFrameworkAppId
