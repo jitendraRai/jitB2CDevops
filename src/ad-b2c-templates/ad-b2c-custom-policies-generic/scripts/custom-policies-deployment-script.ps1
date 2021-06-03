@@ -27,6 +27,15 @@ ReplacePlaceholderWithValueInFile -placeholder "##IdentityExperienceFrameworkApp
 ReplacePlaceholderWithValueInFile -placeholder "##STORAGE_ACCOUNT_PATH##" -actualValue $StorageAccountPath
 ReplacePlaceholderWithValueInFile -placeholder "##FACEBOOK_CLIENT_ID##" -actualValue $FacebookClientId
 
+ReplacePlaceholderWithValueInFile -placeholder "##AD_B2C_TENANT_ID##" -actualValue $TenantId
+ReplacePlaceholderWithValueInFile -placeholder "##PROXY_IDENTITY_EXPERIENCE_FRAMEWORK_APP_ID##" -actualValue $ProxyIdentityExperienceFrameworkAppId
+ReplacePlaceholderWithValueInFile -placeholder "##IDENTITY_EXPERIENCE_FRAMEWORK_APP_ID##" -actualValue $IdentityExperienceFrameworkAppId
+ReplacePlaceholderWithValueInFile -placeholder "##AD_B2C_BRANDING_ASSETS_STORAGE_ACCOUNT_CONN_STR##" -actualValue $StorageAccountPath
+ReplacePlaceholderWithValueInFile -placeholder "##AD_B2C_MANAGEMENT_APP_CLIENT_ID##" -actualValue $ClientID
+ReplacePlaceholderWithValueInFile -placeholder "##AD_B2C_MANAGEMENT_APP_CLIENT_SECRET##" -actualValue $ClientSecret
+
+
+
 try {
     $body = @{grant_type = "client_credentials"; scope = "https://graph.microsoft.com/.default"; client_id = $ClientID; client_secret = $ClientSecret }
 
