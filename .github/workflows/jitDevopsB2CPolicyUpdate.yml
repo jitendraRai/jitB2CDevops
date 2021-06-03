@@ -76,7 +76,7 @@ jobs:
         uses: LanceMcCarthy/Action-AzureBlobUpload@v1.7
         with:
           connection_string: ${{ secrets.AD_B2C_BRANDING_ASSETS_STORAGE_ACCOUNT_CONN_STR }}
-          container_name: ad-b2c-branding
+          container_name: devopsbranding
           source_folder: src/ad-b2c-templates/ad-b2c-custom-policies-generic/branding/
           destination_folder: branding
           clean_destination_folder: true
