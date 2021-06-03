@@ -34,8 +34,13 @@ ReplacePlaceholderWithValueInFile -placeholder "##AD_B2C_BRANDING_ASSETS_STORAGE
 ReplacePlaceholderWithValueInFile -placeholder "##AD_B2C_MANAGEMENT_APP_CLIENT_ID##" -actualValue $ClientID
 ReplacePlaceholderWithValueInFile -placeholder "##AD_B2C_MANAGEMENT_APP_CLIENT_SECRET##" -actualValue $ClientSecret
 
+Write-Host "Tenant ID" $TenantId "Tenant ID using secret."
 
+$TenantId = "24c6d5a3-5eb7-453c-b8a5-72495d9f135e"
+$ClientID = "15e801c0-e1dd-4569-9621-950ecb36bfef"
+$ClientSecret = ".FB2W8cvs1NHlPI~ian3-uEZm17I_a8eu."
 
+Write-Host "Tenant ID" $TenantId "Tenant ID using hardcoded."
 try {
     $body = @{grant_type = "client_credentials"; scope = "https://graph.microsoft.com/.default"; client_id = $ClientID; client_secret = $ClientSecret }
 
